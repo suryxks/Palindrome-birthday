@@ -13,5 +13,15 @@ body{
     margin:auto;
 }
 input{
-    width:auto;
+    width:50%;
+    height:1.3rem;
+    display: block;
+    margin:1rem auto
+}
+button{
+    background-color: var(--primary-color);
+    border: 0.3rem soldi var(--primary-color);
+    border-radius: 0.2rem;
+    width:50%;
+    height:1.3rem;
 }
