@@ -175,10 +175,11 @@ function clickHandler(){
     var ipDate=inputEl.value;
     var ipArr=ipDate.split("-");
     var date={
-        day:ipArr[2],
-        month:ipArr[1],
-        year:ipArr[0]
+        day:Number(ipArr[2]),
+        month:Number(ipArr[1]),
+        year:Number(ipArr[0])
     }
+    console.log(typeof date.day)
     var isPalindrome=checkPalindromeAllFormats(date);
     if(isPalindrome){
         message.innerText="You Date of birth is a palindrome😀";
