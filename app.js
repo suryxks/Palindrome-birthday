@@ -1,5 +1,5 @@
 var inputEl = document.querySelector("#input-element");
-
+var LoadingImage=document.querySelector("#image");
 function reverseStr(str) {
 
     var charList = str.split("");
@@ -179,8 +179,10 @@ function clickHandler(){
         month:Number(ipArr[1]),
         year:Number(ipArr[0])
     }
-    console.log(typeof date.day)
+    LoadingImage.style.display="block";
+    setTimeout(function displayAfterLoading(){
     var isPalindrome=checkPalindromeAllFormats(date);
+    LoadingImage.style.display="none";
     if(isPalindrome){
         message.innerText="You Date of birth is a palindrome😀";
     }else{
@@ -189,9 +191,11 @@ function clickHandler(){
         var prevDate=nextPrevDates[3].day+'/'+nextPrevDates[3].month+'/'+nextPrevDates[3].year;
         message.innerText=`you have missed the next palindrome by ${nextPrevDates[0]} days which is on ${nextDate} and the previous palindrome by ${nextPrevDates[2]} days which is on ${prevDate}`;
     }
+},5000);
     
     
 }
+LoadingImage.style.display="none";
 var checkButton=document.querySelector("#check-btn");
 var inpuEl=document.querySelector("#input-element");
 var message=document.querySelector("#message");
