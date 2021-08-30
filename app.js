@@ -191,7 +191,7 @@ function clickHandler(){
         var prevDate=nextPrevDates[3].day+'/'+nextPrevDates[3].month+'/'+nextPrevDates[3].year;
         message.innerText=`you have missed the next palindrome by ${nextPrevDates[0]} days which is on ${nextDate} and the previous palindrome by ${nextPrevDates[2]} days which is on ${prevDate}`;
     }
-},5000);
+},3000);
     
     
 }
